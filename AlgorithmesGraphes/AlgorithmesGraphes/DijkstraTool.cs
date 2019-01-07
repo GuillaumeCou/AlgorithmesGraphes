@@ -18,22 +18,6 @@ namespace AlgorithmesGraphes
             for (int j = 0; j < tableau.GetLength(1); j++)
             {
                 tableau[0, j] = -1;
-                provenance[j] = -1;
-            }
-
-            for (int i = 0; i < shortest_paths.GetLength(0); i++)
-            {
-                for (int j = 0; j < shortest_paths.GetLength(1); j++)
-                {
-                    shortest_paths[i, j] = -1;
-                }
-            }
-        }
-
-
-        public int[,] Tableau { get => tableau; }
-        public int Depart { get => depart; }
-        public int[,] Shortest_paths { get => shortest_paths; }
 
         /// <summary>
         /// Fonction qui éxecute l'algorithme de Dijkstra.
