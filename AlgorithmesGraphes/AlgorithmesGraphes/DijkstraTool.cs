@@ -6,39 +6,6 @@ using System.Threading.Tasks;
 
 namespace AlgorithmesGraphes
 {
-    class DijkstraTool
-    {
-        // Tableau de string permettant de faire correspondre les notations du graphe étudié et les calculs de l'algorithme.
-
-
-        private string[] sommets;
-        private int depart;
-        private int pointActuel;
-        private List<int> choix_points;
-        private List<int> choix_distances;
-        private int[] provenance;
-        private MatriceGraphe matgra;
-
-        private int[,] shortest_paths;
-        private int[,] tableau;
-
-        private bool est_rempli;
-
-        /// <summary>
-        /// Constructeur de l'outil appliquant l'algorithme de Dijkstra sur un graphe.
-        /// </summary>
-        /// <param name="matgra">Matrice CARREE représentant la graphe.</param>
-        /// <param name="Depart">Sommet de départ des plus courts chemins vers les autres sommets.</param>
-        public DijkstraTool(MatriceGraphe matgra, int Depart, string[] Sommets)
-        {
-            sommets = Sommets;
-            pointActuel = depart = Depart - 1;
-
-            est_rempli = false;
-
-            this.matgra = matgra;
-            tableau = new int[1, matgra.Taille_Matrice];
-            provenance = new int[matgra.Taille_Matrice];
             shortest_paths = new int[matgra.Taille_Matrice, matgra.Taille_Matrice];
 
             choix_points = new List<int>();
