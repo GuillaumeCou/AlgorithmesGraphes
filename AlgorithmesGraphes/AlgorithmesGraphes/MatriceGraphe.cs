@@ -28,39 +28,7 @@ namespace AlgorithmesGraphes
 
             try
             {
-                string[] lecture = File.ReadAllLines("graphe.txt");
-                taille = Calcule_Taille(lecture);
-
-                plateau = new int[taille, taille];
-
-                Remplir_Plateau(lecture);
-
-            }
-            catch (System.IO.FileNotFoundException)
-            {
-                Console.WriteLine("Fichier non trouvé...");
-            }
-        }
-
-        /// <summary>
-        /// Fonction servant à déterminer le nombre de sommets indiqués dans la matrice.
-        /// </summary>
-        /// <param name="lecture">Variable de type "string" contenant la matrice du graphe.</param>
-        /// <returns>Variable de type "int" indiquant le nombre de sommets</returns>
-        private int Calcule_Taille(string[] lecture)
-        {
-            int taille = -1;
-            if (lecture != null)
-            {
-                taille++;
-
-                for (int i = 0; i < lecture[0].Length; i++)
-                {
-                    if (lecture[0][i] == ',')
-                    {
-                        taille++;
-                    }
-                }
+                string[] lecture = File.ReadAllLines("graphe.tx
                 taille++;
             }
             return taille;
