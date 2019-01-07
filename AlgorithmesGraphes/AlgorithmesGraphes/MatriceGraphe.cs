@@ -32,42 +32,6 @@ namespace AlgorithmesGraphes
                 taille++;
             }
             return taille;
-        }
-
-        /// <summary>
-        /// Fonction qui extrait les valeurs du tableau de chaines de caratères.
-        /// </summary>
-        /// <param name="lecture">Chaine de caractères représentant la matrice du graphe</param>
-        private void Remplir_Plateau(string[] lecture)
-        {sdfqsdfsqdfqsdf
-            for (int i = 0; i < taille; i++)
-            {
-                int j = 0;
-                string valeur = "";
-                for (int k = 0; k < lecture[i].Length; k++)
-                {
-                    if (lecture[i][k] == ',' || lecture[i][k] == '\n')
-                    {
-                        plateau[i, j] = int.Parse(valeur);
-                        j++;
-                        valeur = "";
-                    }
-                    else
-                    {
-                        valeur += lecture[i][k];
-                    }
-                }
-                plateau[i, j] = int.Parse(valeur);
-            }
-        }
-
-        public override string ToString()
-        {
-            string mot = "";
-
-            for (int i = 0; i < taille; i++)
-            {
-                for (int j = 0; j < taille; j++)
                 {
                     if (plateau[i, j] < 10)
                     {
