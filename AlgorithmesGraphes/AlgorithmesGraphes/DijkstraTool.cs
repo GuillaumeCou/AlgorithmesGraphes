@@ -8,33 +8,7 @@ namespace AlgorithmesGraphes
 {
             shortest_paths = new int[matgra.Taille_Matrice, matgra.Taille_Matrice];
 
-            choix_points = new List<int>();
-            choix_distances = new List<int>();
-
-
-            choix_points.Add(depart);
-            choix_distances.Add(0);
-
-            for (int j = 0; j < tableau.GetLength(1); j++)
-            {
-                tableau[0, j] = -1;
-
-        /// <summary>
-        /// Fonction qui éxecute l'algorithme de Dijkstra.
-        /// </summary>
-        public void Compute()
-        {
-            // Nous inscrivons dans le tableau de Dijkstra la distance au point de départ, soit 0.
-            tableau[0, depart] = 0;
-
-            /* Tant qu'il y a des valeur négative (indiquant des vides dans le tableau de Dijkstra) et que le tableau n'est
-             * pas déterminé comme rempli, nous continuons à appliquer l'algorithme de Dijkstra.*/
-            while (!est_rempli)
-            {
-                // Nous ajoutons une ligne au tableau de Dijkstra afin de pouvoir consigner les nouvelles distances calculées.
-                tableau = Ajouter_Ligne(tableau);
-
-                // Nous calculons les distances vers tous les sommets "libres".
+            choiles sommets "libres".
                 Calculer_Distance();
 
                 // Pour finir, nous choisissons le sommets qui a la plus petite valeur à parcourir.
